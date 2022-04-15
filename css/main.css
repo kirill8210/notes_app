@@ -1,0 +1,122 @@
+#notes{
+    margin: 20px 0;
+}
+
+.title_notes{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr;
+    background: #295358;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+.title_notes_name{
+    margin-left: 35px;
+}
+
+.list_notes{
+    display: flex;
+    flex-direction: column;
+}
+
+.create_notes{
+    display: flex;
+    justify-content: end;
+}
+
+.notes{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr;
+    align-items: center;
+    background: #59c9cd;
+    color: #212121;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 8px 0 0;
+    padding: 7px 10px;
+}
+
+.notes_name{
+    display: flex;
+    align-items: center;
+}
+
+.notes_actions{
+    display: flex;
+    justify-content: end;
+}
+
+.category_img{
+    display: flex;
+    align-items: center;
+}
+
+.category_img img{
+    margin-right: 10px;
+    width: 25px;
+}
+
+.notes_actions{
+    display: flex;
+}
+
+.notes_actions a{
+    display: flex;
+    align-items: center;
+}
+
+.notes_actions img{
+    width: 20px;
+    margin-left: 5px;
+}
+
+.create_notes button{
+    width: 150px;
+    font-size: 16px;
+    background: #295358;
+    color: #ffffff;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in;
+}
+
+.create_notes button:hover{
+    background-color: #59c9cd;
+    color: #212121;
+}
+
+.title_notes_total{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    background: #295358;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+.list_notes_total{
+    display: flex;
+    align-items: center;
+}
+
+.notes_total{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: center;
+    background: #59c9cd;
+    color: #212121;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 8px 0 0;
+    padding: 7px 10px;
+}
