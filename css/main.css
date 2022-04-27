@@ -1,8 +1,8 @@
-#notes{
+#tasks{
     margin: 20px 0;
 }
 
-.title_notes{
+.title_tasks{
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr;
     background: #295358;
@@ -13,23 +13,24 @@
     border-radius: 5px;
 }
 
-.title_notes_name{
+.title_tasks_name{
     margin-left: 35px;
 }
 
-.list_notes{
+.list_tasks{
     display: flex;
     flex-direction: column;
 }
 
-.create_notes{
+.create_tasks{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 }
 
-.notes{
+.tasks{
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr;
+    gap: 5px;
     align-items: center;
     background: #59c9cd;
     color: #212121;
@@ -40,12 +41,26 @@
     padding: 7px 10px;
 }
 
-.notes_name{
+.tasks_name{
     display: flex;
     align-items: center;
 }
 
-.notes_actions{
+.tasks_title{
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tasks_content{
+    width: 195px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tasks_actions{
     display: flex;
     justify-content: end;
 }
@@ -60,38 +75,39 @@
     width: 25px;
 }
 
-.notes_actions{
+.tasks_actions{
     display: flex;
 }
 
-.notes_actions a{
+.tasks_actions a{
     display: flex;
     align-items: center;
 }
 
-.notes_actions img{
+.tasks_actions img{
     width: 20px;
+    height: 20px;
     margin-left: 5px;
+    cursor: pointer;
 }
 
-.create_notes button{
-    width: 150px;
-    font-size: 16px;
-    background: #295358;
+.create_tasks button{
+    background: #217479;
     color: #ffffff;
-    padding: 8px;
     margin-top: 10px;
     border: 1px solid #212121;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in;
 }
 
-.create_notes button:hover{
-    background-color: #59c9cd;
-    color: #212121;
+.create_tasks button:hover{
+    background: #295358;
+    color: #ffffff;
 }
 
-.title_notes_total{
+.hidden_btn{
+    display: none;
+}
+
+.title_tasks_total{
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     background: #295358;
@@ -103,12 +119,12 @@
     border-radius: 5px;
 }
 
-.list_notes_total{
+.list_tasks_total{
     display: flex;
     align-items: center;
 }
 
-.notes_total{
+.tasks_total{
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     align-items: center;
@@ -119,4 +135,71 @@
     font-weight: 400;
     margin: 8px 0 0;
     padding: 7px 10px;
+}
+
+.card{
+    padding: 30px;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.card_active{
+    display: block;
+}
+
+.card_modal{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 50px 20px 20px;
+    background-color: #59c9cd;
+    width: 500px;
+    border-radius: 12px;
+    cursor: auto;
+}
+
+.card_title{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card_control{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px 12px;
+    margin: 0 0 10px;
+    font-size: 16px;
+    border: 1px solid #212121;
+    border-radius: 5px;
+}
+
+.card_textarea{
+    height: auto;
+}
+
+.cart_btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn_submit{
+    background: #217479;
+    color: #ffffff;
+    margin: 0 auto;
+    border: 1px solid #212121;
+}
+
+.btn_submit:hover{
+    background-color: #295358;
 }

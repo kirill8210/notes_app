@@ -9,144 +9,71 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js" type="module"></script>
 </head>
 <body>
 <div class="container">
-    <div id="notes">
-        <div class="title_notes">
-            <div class="title_notes_name">Name</div>
+    <div id="tasks">
+        <div class="title_tasks">
+            <div class="title_tasks_name">Name</div>
             <div>Created</div>
             <div>Category</div>
             <div>Content</div>
             <div>Dates</div>
-            <div class="notes_actions">
+            <div class="tasks_actions">
                 <img src="img/archive_icon_wh.png" alt="archive_icon">
                 <img src="img/delete_icon_wh.png" alt="delete_icon">
             </div>
         </div>
-        <div class="list_notes">
-            <div class="notes">
-                <div class="notes_name">
-                    <div class="category_img">
-                        <img src="img/task1_icon.png" alt="edit_icon">
-                    </div>
-                    Shopping list</div>
-                <div class="notes_created">April 20, 2022</div>
-                <div class="notes_category">Task</div>
-                <div class="notes_content">Tomatoes, bread</div>
-                <div class="notes_dates"></div>
-                <div class="notes_actions">
-                    <a href="#">
-                        <img src="img/edit_icon.png" alt="edit_icon">
-                    </a>
-                    <a href="#">
-                        <img src="img/archive_icon.png" alt="archive_icon">
-                    </a>
-                    <a href="#">
-                        <img src="img/delete_icon.png" alt="delete_icon">
-                    </a>
-                </div>
-            </div>
-            <div class="notes">
-                <div class="notes_name">
-                    <div class="category_img">
-                        <img src="img/task2_icon.png" alt="edit_icon">
-                    </div>
-                    The theory</div>
-                <div class="notes_created">April 25, 2022</div>
-                <div class="notes_category">Random Thought</div>
-                <div class="notes_content">The evolutions</div>
-                <div class="notes_dates"></div>
-                <div class="notes_actions">
-                    <a href="#">
-                        <img src="img/edit_icon.png" alt="edit_icon">
-                    </a>
-                    <a href="#">
-                        <img src="img/archive_icon.png" alt="archive_icon">
-                    </a>
-                    <a href="#">
-                        <img src="img/delete_icon.png" alt="delete_icon">
-                    </a>
-                </div>
-            </div>
-            <div class="notes">
-                <div class="notes_name">
-                    <div class="category_img">
-                        <img src="img/task3_icon.png" alt="edit_icon">
-                    </div>
-                    New Feature</div>
-                <div class="notes_created">May 05, 2022</div>
-                <div class="notes_category">Task</div>
-                <div class="notes_content">Tomatoes, bread</div>
-                <div class="notes_dates">3/5/2022, 5/5/2022</div>
-                <div class="notes_actions">
-                    <a href="#">
-                        <img src="img/edit_icon.png" alt="edit_icon">
-                    </a>
-                    <a href="#">
-                        <img src="img/archive_icon.png" alt="archive_icon">
-                    </a>
-                    <a href="#">
-                        <img src="img/delete_icon.png" alt="delete_icon">
-                    </a>
-                </div>
-            </div>
-            <div class="notes">
-                <div class="notes_name">
-                    <div class="category_img">
-                        <img src="img/task4_icon.png" alt="edit_icon">
-                    </div>
-                    William Gaddis</div>
-                <div class="notes_created">April 20, 2022</div>
-                <div class="notes_category">Idea</div>
-                <div class="notes_content">Power</div>
-                <div class="notes_dates"></div>
-                <div class="notes_actions">
-                    <a href="#">
-                        <img src="img/edit_icon.png" alt="edit_icon">
-                    </a>
-                    <a href="#">
-                        <img src="img/archive_icon.png" alt="archive_icon">
-                    </a>
-                    <a href="#">
-                        <img src="img/delete_icon.png" alt="delete_icon">
-                    </a>
-                </div>
-            </div>
-            <div class="create_notes">
-                <button>Create Note</button>
-            </div>
+        <div class="list_tasks"></div>
+        <div class="create_tasks">
+            <button class="toggle_state">Archive</button>
+            <button class="modal_btn">Create Notes</button>
         </div>
     </div>
     <div id="category_notes">
-        <div class="title_notes_total">
+        <div class="title_tasks_total">
             <div class="title_notes_name">Note Category</div>
             <div>Active</div>
             <div>Archived</div>
         </div>
-        <div class="list_notes">
-            <div class="notes_total">
-                <div class="notes_name">
-                    <div class="category_img">
-                        <img src="img/task1_icon.png" alt="edit_icon">
-                    </div>
-                    <div>Task</div>
+        <div class="list_tasks_category"></div>
+    </div>
+    <div class="card">
+        <div class="card_modal">
+            <div class="card_title">Add new task</div>
+            <form name="addTask" class="card_form">
+                <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        class="card_control"
+                        placeholder="Task name"
+                />
+                <select name="category" id="category" class="card_control">
+                    <option value="Task">Task</option>
+                    <option value="Random Thought">Random Thought</option>
+                    <option value="Idea">Idea</option>
+                </select>
+                <input
+                        type="text"
+                        name="content"
+                        id="content"
+                        class="card_control"
+                        placeholder="Task content"
+                />
+                <textarea name="dates" id="dates" class="card_control card_textarea" placeholder="Notes with date 01/01/2020"></textarea>
+                <input
+                        type="hidden"
+                        name="itemId"
+                        id="itemId"
+                        class="form-control"
+                        placeholder="itemId"
+                />
+                <div class="cart_btn">
+                    <button type="submit" id="addUpdate" class="btn_submit"></button>
                 </div>
-                <div>13</div>
-                <div>4</div>
-            </div>
-            <div class="notes_total">
-                <div class="notes_name">
-                    <div class="category_img">
-                        <img src="img/task2_icon.png" alt="edit_icon">
-                    </div>
-                    <div>Random Thought</div>
-                </div>
-                <div>8</div>
-                <div>5</div>
-            </div>
-        </div>
+            </form>
         </div>
     </div>
 </div>
