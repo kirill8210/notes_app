@@ -128,9 +128,11 @@ function listItemCategory({name, totalActive, totalArchive} = {}) {
 
     const activeTasks = document.createElement('div');
     activeTasks.textContent = totalActive;
+    activeTasks.classList.add('tasks_counter');
 
     const archivedTasks = document.createElement('div');
     archivedTasks.textContent = totalArchive;
+    archivedTasks.classList.add('tasks_counter');
 
     categoryImg.append(imgTasks);
     titleCategory.append(categoryImg, nameCategory);

@@ -1,0 +1,105 @@
+@media screen and (min-width: 1200px){
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+@media (min-width: 769px) {
+
+    .title_tasks_mobile{
+        display: none;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .title_tasks{
+        display: none;
+    }
+
+    .title_tasks_mobile{
+        display: flex;
+        justify-content: center;
+        background: #295358;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 8px 10px;
+        border-radius: 5px;
+    }
+
+    .tasks{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        padding: 10px;
+        position: relative;
+    }
+
+    .category_img img{
+        margin-right: 5px;
+    }
+
+    .tasks_name, .tasks_content {
+        max-width: 90%;
+    }
+
+    .tasks_dates{
+        width: auto;
+        height: auto;
+    }
+
+    /*.tasks_actions{*/
+    /*    width: 100%;*/
+    /*    display: flex;*/
+    /*    justify-content: space-evenly;*/
+    /*}*/
+    .tasks_actions{
+        position: absolute;
+        top: 0;
+        right: 15px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+
+    }
+
+    .tasks_actions img {
+        margin-bottom: 15px;
+    }
+
+    button{
+        width: 125px;
+    }
+
+    .tasks_total{
+        grid-template-columns: 5fr 2fr 2fr;
+    }
+
+    .title_tasks_total{
+        grid-template-columns: 5fr 2fr 2fr;
+    }
+
+    .tasks_counter{
+        text-align: center;
+    }
+
+    .card_modal {
+        top: 15%;
+        width: 90%;
+    }
+}
+

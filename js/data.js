@@ -1,10 +1,10 @@
 const tasks = [
     {
         _id: '1',
-        name: 'Shopping list',
-        created: 'April 20, 2022',
-        category: 'Task',
-        content: 'Tomatoes, bread',
+        name: 'Shopping list Shopping list Shopping list ',
+        created: 'December 20, 2022',
+        category: 'Random Thought',
+        content: 'Tomatoes, bread Tomatoes, bread',
         dates: 'я пошел 03/05/2022, и пришел 05/11/2022',
         completed: false,
     },
